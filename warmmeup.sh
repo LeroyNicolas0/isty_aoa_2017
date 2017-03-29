@@ -11,7 +11,7 @@ nb_it=$1+$kernel
 echo "---"
 echo "Création de waup_$temp.txt ..."
 echo "---"
-echo "Création de png_$temp.png ..."
+echo "Création de waup_$temp.png ..."
 /usr/bin/gnuplot <<EOF
 reset
 set terminal png
@@ -22,7 +22,7 @@ set ylabel "valeur en cycles"
 set xlabel "Execution"
 set xrange [0:$nb_it]
 
-set title "Evolution des performances"
+set title "Evolution des performances, warmup"
 set grid
 
 set output "./results/waup_$temp.png"

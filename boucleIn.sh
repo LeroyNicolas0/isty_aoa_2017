@@ -17,7 +17,7 @@ echo "---"
 ./moy res_$temp.txt
 
 echo "---"
-echo "Création de png_$temp.png ..."
+echo "Création de boin_$temp.png ..."
 /usr/bin/gnuplot <<EOF
 reset
 set terminal png
