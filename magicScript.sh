@@ -6,9 +6,8 @@ temp=`date '+%d%b%H%M%S'`
 warmup=10
 kernel=10
 nb_it=$warmup+$kernel
-repet=1
 
-for i in $(seq 1 $repet)
+for i in $(seq 1 $1)
 do
 	./progG $warmup $kernel >> ./results/res_$temp.txt 
 done
@@ -29,7 +28,7 @@ set ylabel "valeur en cycles"
 
 
 set xlabel "Execution"
-set xrange [0:$nb_it]
+set xrange [0:$1]
 
 set title "Evolution des performances"
 set grid

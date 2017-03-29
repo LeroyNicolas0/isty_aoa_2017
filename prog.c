@@ -18,6 +18,7 @@ int main(int argc, char **argv)
 	int n=TAILLE;
 	float x=0.5;
 	int i=0;
+	uint64_t somme;
 	//unsigned long long start;
 	uint64_t start64;
 	//unsigned long long stop;
@@ -37,9 +38,9 @@ int main(int argc, char **argv)
 		start64=rdtsc();
 		baseline (n,a,b,x);
 		stop64=rdtsc();
-		printf("%" PRIu64 "\n", stop64-start64);
+		somme+=stop64-start64;
 	}
-
+	printf("%" PRIu64 "\n", somme/(uint64_t)atoi(argv[2]));
 	
 	free(a);
 	free(b);
@@ -63,15 +64,10 @@ float* initialisation( float* a, int n)
 
 void warmup(int n, float a[n], float b[n], float x, int tour)
 {
-	uint64_t start64;
-	uint64_t stop64;
 	int i=0;
 	for(i =0;i<tour;i++)
 	{
-		start64=rdtsc();
 		baseline (n,a,b,x);
-		stop64=rdtsc();
-		printf("%" PRIu64 "\n", stop64-start64);
 	}
 	
 }
