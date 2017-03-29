@@ -12,4 +12,6 @@ progicc :
 pwarmup :
 	@gcc -Wall pWarmup.c kernel.c rdtsc.c -o pWarmup
 
+pbouclein : 
+	@gcc -Wall pBoucleIn.c kernel.c rdtsc.c -o pBoucleIn
 	
