@@ -12,7 +12,7 @@ int main(int argc, char **argv)
     ssize_t read;
     char nom[45]="";
     float moy=0;
-    int nb_l;
+    int nb_l=0;
     float var=0;
     float ec_ty;
     
